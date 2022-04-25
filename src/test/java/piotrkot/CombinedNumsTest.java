@@ -11,7 +11,6 @@ package piotrkot;
 
 import org.hamcrest.MatcherAssert;
 import org.hamcrest.Matchers;
-import org.junit.Ignore;
 import org.junit.Test;
 
 /**
@@ -28,19 +27,16 @@ public final class CombinedNumsTest {
         );
     }
 
-    @Ignore
     @Test(expected = IllegalArgumentException.class)
     public void shouldNotFindWithZero() throws Exception {
         new CombinedNums(0).findMax();
     }
 
-    @Ignore
     @Test(expected = IllegalArgumentException.class)
     public void shouldNotFindNegative() throws Exception {
         new CombinedNums(-1).findMax();
     }
 
-    @Ignore
     @Test
     public void shouldFindCaseOne() throws Exception {
         MatcherAssert.assertThat(
@@ -49,7 +45,6 @@ public final class CombinedNumsTest {
         );
     }
 
-    @Ignore
     @Test
     public void shouldFindCaseTwo() throws Exception {
         MatcherAssert.assertThat(
@@ -58,7 +53,6 @@ public final class CombinedNumsTest {
         );
     }
 
-    @Ignore
     @Test
     public void shouldFindCaseThree() throws Exception {
         MatcherAssert.assertThat(

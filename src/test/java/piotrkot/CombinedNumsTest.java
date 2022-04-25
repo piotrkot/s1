@@ -60,4 +60,20 @@ public final class CombinedNumsTest {
             Matchers.is("42423420")
         );
     }
+
+    @Test
+    public void shouldFindEqual() throws Exception {
+        MatcherAssert.assertThat(
+            new CombinedNums(1, 1).findMax(),
+            Matchers.is("11")
+        );
+    }
+
+    @Test
+    public void shouldFindMaxInteger() throws Exception {
+        MatcherAssert.assertThat(
+            new CombinedNums(Integer.MAX_VALUE, 9).findMax(),
+            Matchers.is("92147483647")
+        );
+    }
 }

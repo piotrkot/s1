@@ -9,7 +9,6 @@
  */
 package piotrkot;
 
-import java.math.BigInteger;
 import java.util.List;
 import java.util.Objects;
 import lombok.RequiredArgsConstructor;
@@ -93,10 +92,7 @@ public final class CombinedNums {
 
         @Override
         public int compareTo(final Num num) {
-            return new BigInteger(num.value + this.value)
-                .compareTo(
-                    new BigInteger(this.value + num.value)
-                );
+            return (num.value + this.value).compareTo(this.value + num.value);
         }
 
         @Override
